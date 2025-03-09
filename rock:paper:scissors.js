@@ -1,6 +1,6 @@
 console.log('Welcome to the game, please define your selection.');
 
-//Get user's choice
+// Get user's choice
 const getUserChoice = userInput => {
   userInput = userInput.toLowerCase();
 if(userInput === "rock" || userInput === "paper" || userInput === "scissors") {
@@ -9,7 +9,7 @@ if(userInput === "rock" || userInput === "paper" || userInput === "scissors") {
   console.log("There's an error in your selection");
   }
 }
-//Get Computer's choice
+// Get Computer's choice
 const getComputerChoice = () => {
   const choice = Math.floor(Math.random() * 3); 
   switch (choice) {
@@ -47,7 +47,7 @@ let determineWinner = (userChoice, computerChoice) => {
     }
   }
 }
-//Gameplay interface
+// Gameplay interface
 function playGame(userInput) {
 const userChoice = getUserChoice(userInput);
 const computerChoice = getComputerChoice();
@@ -56,6 +56,6 @@ console.log(`User's choice: ${userChoice}`);
 console.log(`Computer's choice: ${computerChoice}`);
 console.log(determineWinner(userChoice, computerChoice));
 }
-//Start the program and display the results
 
+// Start the program and display the results
 playGame("rock");
